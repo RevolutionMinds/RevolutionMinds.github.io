@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Revolution Minds</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./leaflet/leaflet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <a href="#home" class="logo"><img src="./images/Logo.png" alt="" style="height: 6rem;">Revolution Minds<span
+                class="animate" style="--i:1;"></span></a>
+
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+
+        <nav class="navbar1">
+            <a href="#about" class="active"><i class='bx bx-home-alt-2'></i> Home</a>
+            <a href="#mappa"><i class='bx bx-map-alt'></i> Mappa negozi</a>
+            <a href="#shopList"><i class='bx bx-store-alt'></i> Negozi</a>
+            <a href="#home" ><i class='bx bx-question-mark'></i> Chi siamo</a>
+            <a href="#rana-plaza"><i class='bx bx-world'></i> Nel mondo</a>
+            <a href="contact.html"><i class='bx bx-chat'></i> Contattaci</a>
+            <a href="https://www.thredup.com/fashionfootprint/" target="_blank"><i
+                    class='bx bx-link-external'></i> Quiz</a>
+            <span class="active-nav"></span>
+        </nav>
+    </header>
+    <!-- Particelle -->
+    <!-- <div id="particles-js"></div> -->
+
+    <section class="about" id="about">
+        <div class="text-animate">
+            <div class="title">
+                <h1 id="SeconHand">#SecondHand</h1>
+            </div>
+        </div>
+        <h2 class="heading"><span class="color2">Unisciti al </span><span>cambiamento</span></h2>
+
+        <div class="about-img">
+            <img src="/images/clothes.jpg" alt="">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="about-content">
+            <h3>Vuoi sapere quanto impatta il tuo <span>armadio?</span></h3>
+            <!-- <p style="text-align:center;">Scopri qui sotto quanto inquina il tuo armadio</p> -->
+            <div class="btnn-box btnns" id="btn-home">
+                <a href="https://www.thredup.com/fashionfootprint/" target="_blank" class="btn">Scoprilo qui</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mappa" id="mappa">
+        <h2 class="heading">Mappa del second hand <span>Veronese</span></h2>
+
+        <div class="map-row">
+            <div class="map-column">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shopList row" id="shopList">
+        <h2 class="heading">Negozi Second hand a <span>Verona</span></h2>
+
+        <div class="card">
+            <div class="img-redirect">
+                <p>ciao</p>
+            </div>
+            <a href="https://veronaborgomilano.babybazar.it/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/babyBazar.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title"><span><img src="./images/passeggino.png"
+                            style="height: 20px; width: 20px;"></span> Baby bazar Verona</h5>
+                <p class="card-text">Corso Milano, 114/A, 37138 Verona VR</p>
+                <a href="https://www.google.com/maps/place/BABYBAZAR+Verona+Borgo+Milano/@45.4461306,10.9485627,16z/data=!3m1!4b1!4m6!3m5!1s0x4781e18d2150b701:0x20497d3b6940330a!8m2!3d45.4461307!4d10.9534336!16s%2Fg%2F11b6gdhy9f?entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="http://www.ildongi.it/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/ildongi.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">il DONGI Second Life Shop</h5>
+                <p class="card-text">Via Calcara, 119, 37053 Cerea VR</p>
+                <a href="https://www.google.com/maps/place/il+DONGI+Second+Life+Shop/@45.1868501,11.2386141,17z/data=!3m2!4b1!5s0x477f72bcdf77bd33:0xda4a4920a9183c08!4m6!3m5!1s0x477f72bce7f2baa9:0x954177a95e918dd0!8m2!3d45.1868463!4d11.241189!16s%2Fg%2F1tdm2k_y?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://humanavintage.it/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/humana.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Humana store</h5>
+                <p class="card-text">Piazza Pasque Veronesi, 5a, 37121 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Humana+Vintage+Verona/@45.4396354,10.9893883,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f908225e553:0x49a1d337c799e083!8m2!3d45.4396354!4d10.9893883!16s%2Fg%2F11p0w66v07?entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://msha.ke/fleaverona/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/flea.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">FLEA Secondhand Upcycling</h5>
+                <p class="card-text">Via Cesare Betteloni, 42D, 37131 Verona VR</p>
+                <a href="https://www.google.com/maps/place/FLEA+Secondhand+Upcycling/@45.4432754,11.0202247,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f3e6c77dfaf:0x566ccfda3aa8c08c!8m2!3d45.4432754!4d11.0202247!16s%2Fg%2F11t1rhwjht?entry=ttu"
+                    target="_blank" class="btn"
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.dituttodipiu.net/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/dituttodipiu.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Ditutto Dipiù Mercatino dell'usato</h5>
+                <p class="card-text">Via Albere, 37/A, 37138 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Ditutto+Dipiù+Mercatino+dell'Usato+Verona/@45.4328346,10.9707115,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f5fdae30791:0xac9c6c4ff2796af4!8m2!3d45.4328309!4d10.9755824!16s%2Fg%2F1tgplwgc?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.facebook.com/IlMercatoDellUsatoDiFerrariDino" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/dinoferrari.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino Dell'Usato Di Ferrari Dino</h5>
+                <p class="card-text">Viale dell' Industria, 38/D, 37135 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+Dell'Usato+Di+Ferrari+Dino/@45.4151579,10.971293,17.25z/data=!4m6!3m5!1s0x477f5f78ebc11285:0x34b546729fa68447!8m2!3d45.4152422!4d10.974281!16s%2Fg%2F1td70vpg?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.facebook.com/vintagefe/?locale=it_IT" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/vintagefe.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Vintage Fe Mercatino Vintage</h5>
+                <p class="card-text">Via Guglielmo Marconi, 62/A, 37122 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+Vintage+Verona+(Vintage+Fe)/@45.4309918,10.9613805,13.96z/data=!4m6!3m5!1s0x477f5f5ca66d63c7:0xcc64ee34ee6bd851!8m2!3d45.4358653!4d10.985866!16s%2Fg%2F11c2ppdjn5?entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="http://www.emmausvillafranca.org/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/emmaus.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino solidale Emmaus Villafranca
+                </h5>
+                <p class="card-text">Localita' Emmaus, 1, 37069 Villafranca di Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+solidale+-+Comunità+Emmaus+Villafranca/@45.355345,10.8102567,17z/data=!3m1!4b1!4m6!3m5!1s0x4781ddb241625f07:0xbff5b4f9d924165b!8m2!3d45.3553413!4d10.8128316!16s%2Fg%2F11b5pjm27r?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.facebook.com/MercatinoBassoAcquar/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/mobilidiscount.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino Mobil Discount</h5>
+                <p class="card-text">Via Basso Acquar, 69, 37135 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+Mobil+Discount/@45.4231949,10.9893163,16z/data=!3m1!4b1!4m6!3m5!1s0x477f5f6d1a66203f:0x764ec6b489fa6cac!8m2!3d45.4231912!4d10.9918912!16s%2Fg%2F1234lrq_4?hl=it&entry=ttu"
+                    target="_blank" class="btn"
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="http://laruotadellusato.it/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/ruota.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino La Ruota dell'Usato</h5>
+                <p class="card-text">Via Germania, 19, 37136 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+La+Ruota+dell'Usato/@45.413336,10.9545687,17z/data=!3m2!4b1!5s0x4781e1cca2052471:0x7e99f425abbb49fc!4m6!3m5!1s0x4781e1cca40244c7:0x33387d398bc7faf2!8m2!3d45.4133323!4d10.9571436!16s%2Fg%2F11b6_49gc9?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.usaeriusa.org/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/usaeriusa.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Usa e Riusa</h5>
+                <p class="card-text">Via Nicolò Giolfino, 2, 37133 Verona VR</p>
+                <a href="https://www.google.com/maps/place/mercatino+usato+Usa+e+Riusa/@45.4345493,11.0090941,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f24b824bfcd:0xcb475fc855d04322!8m2!3d45.4345456!4d11.011669!16s%2Fg%2F1tw_m25z?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="http://www.ghedetuto.jimdo.com/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/ghedetuto.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino dell'usato Ghedetuto</h5>
+                <p class="card-text">Strada Corte Garofolo, 10, 37057 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+dell'usato+Ghedetuto+OPERAZIONE+MATO+GROSSO/@45.4027196,11.0198035,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5e5a7499bfef:0xb8092bf97f0ae5b4!8m2!3d45.4027159!4d11.0223784!16s%2Fg%2F11bwh5rqml?hl=it&entry=ttu"
+                    target="_blank" class="btn"
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://veronafiera.mercatinousato.com/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/lamercatino.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Mercatino usato verona</h5>
+                <p class="card-text">Via Angelo Messedaglia, 8 b, 37135 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+usato+verona/@45.4079293,10.978074,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5fc321a5187f:0x3757f24c81763a4c!8m2!3d45.4079256!4d10.9806489!16s%2Fg%2F11h3c48vgz?entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.facebook.com/profile.php?id=100075939395936" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/minime.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title"><span><img src="./images/passeggino.png"
+                            style="height: 20px; width: 20px;"></span> Minimè</h5>
+                <p class="card-text">Via Pompei, 8A, 37064 Povegliano Veronese VR</p>
+                <a href="https://www.google.com/maps/place/Minimè/@45.3494211,10.8768042,17z/data=!3m2!4b1!5s0x4781de59b770ac6f:0x8089d288b4171099!4m6!3m5!1s0x4781df091a1e15e1:0x338bc529a8844523!8m2!3d45.3494174!4d10.8793791!16s%2Fg%2F11sm_ns0rx?hl=it&entry=ttu"
+                    target="_blank" class="btn"
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.comenuovo-vr.it/" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/comenuovo.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title"><span><img src="./images/passeggino.png"
+                            style="height: 20px; width: 20px;"></span> Come Nuovo</h5>
+                <p class="card-text">Via Carlo Alberto, 1, 37136 Verona VR</p>
+                <a href="https://www.google.com/maps/place/Comenuovo/@45.4217538,10.9682552,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f7d13702a77:0xd0892a1faf1ee6f5!8m2!3d45.4217501!4d10.9708301!16s%2Fg%2F1ptx91hfb?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.secondamanina.it/verona1" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/secondamaninaest.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title"><span><img src="./images/passeggino.png"
+                            style="height: 20px; width: 20px;"></span> SECONDAMANINA Est</h5>
+                <p class="card-text">Via Adamello, 8/D, 37036 San Martino Buon Albergo VR</p>
+                <a href="https://www.google.com/maps/place/Secondamanina+Verona/@45.4256101,11.0976348,17z/data=!3m1!4b1!4m6!3m5!1s0x477f5f71e9554b5b:0xe6b9f78a694269b4!8m2!3d45.4256064!4d11.1002097!16s%2Fg%2F1hc28_tql?entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="https://www.secondamanina.it/bovolone" class="redirect" target="_blank">
+                <i class='bx bx-link-external'></i>
+                <img src="./images/negozi/secondamaninabovolone.png" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title"><span><img src="./images/passeggino.png"
+                            style="height: 20px; width: 20px;"></span> SECONDAMANINA Bovolone</h5>
+                <p class="card-text">Via S. Pierino, 42, 37051 Bovolone VR</p>
+                <a href="https://www.google.com/maps/place/Mercatino+Usato+Bimbi+SECONDAMANINA/@45.2536378,11.1251683,17z/data=!3m1!4b1!4m6!3m5!1s0x477f6f0e607924e1:0x4f071175ad45795d!8m2!3d45.2536341!4d11.1277432!16s%2Fg%2F11c60j6qqp?hl=it&entry=ttu"
+                    target="_blank" class="btn "
+                    style="width: 10rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Trovalo</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.html" class="redirect" target="_blank" id="caricamento">
+                <i class='bx bx-link-external'></i>
+                <img src="./Videos/caricamento.gif" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">In continuo aggiornamento...</h5>
+                <p class="card-text">Se hai un negozio che non è nella lista:</p>
+                <a href="contact.html" class="btn "
+                    style="width: 12rem; height:4rem ;display:flex; align-items:center; text-align:center; justify-content:center; font-size:1.7rem;">Contattaci</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="home show-animate container-fluid" id="home">
+        <div class="home-content row">
+            <div class="col-6">
+                <h1 class="heading">Ciao, siamo i <span style="color: var(--main-color);">Revolution Minds</span></h1>
+                <p>Siamo 5 studenti presso l'ITS di Web Development e abbiamo l'ambizione di creare un impatto positivo
+                    nella
+                    nostra comunità. Il nostro obiettivo è quello di evidenziare l'importanza di <b><span
+                            style="color: var(--main-color);">ridurre l'impatto
+                            ambientale</span></b> legato all'<b><span style="color: var(--main-color);">industria della
+                            moda</span></b>, spesso caratterizzata da produzioni inquinanti e spreco di
+                    risorse, in particolare, ci concentreremo sulla sensibilizzazione riguardo all'acquisto da <b><span
+                            style="color: var(--main-color);">negozi
+                            dell'usato</span></b> anziché da aziende fast fashion, le cui pratiche possono essere
+                    dannose
+                    per l'ambiente e per
+                    le condizioni di lavoro dei lavoratori del settore.
+                </p>
+                <div class="btnn-box">
+                    <a href="#about" class="btn">Idea</a>
+                    <a href="contact.html" class="btn">Contattaci</a>
+                </div>
+                <div class="home-sci">
+                    <a href="https://github.com/"><i class='bx bxl-github'></i></a>
+                    <a href=""><i class='bx bxl-gmail'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                    <!-- <span class="animate" style="--i:6;"></span> -->
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="home-imgHover ">
+                    <video src="./Videos/FastFashion.mp4" controls autoplay loop muted></video>
+                </div>
+            </div>
+        </div>
+        <!-- <span class="animate home-img" style="--i:7;"></span> -->
+    </section>
+
+    <section class="rana-plaza" id="rana-plaza">
+        <div class="row rana-plaza row">
+
+            <h1 class="heading">Cosa sucecede nel <span>mondo</span></h1>
+            <div>
+                <div class="carousel-secondhand">
+                    <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                        <div id="carouselExample" class="carousel ">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./images/ranaplaza/ranaplaza.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaPlaza3.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaPlaza4.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza5.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza6.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza7.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/ranaplaza/ranaplaza8.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="plaza-text rana-content">
+                    <p id="rana-text">
+                        1134 persone hanno perso la vita nel 2013, in Bangladesh, per colpa di grandi brand che noi
+                        continuamo a finanziarie non
+                        curanti dei diritti dei lavoratori. L'edificio si chiamava Rana Plaza, ed era collocato nel
+                        Savar, in Bangladesh. Migliaia di
+                        persone lavoravano alla produzione di capi per marchi come <span>Primark, Benetton, Camaieu,
+                            H&M, Zara, Bershka, Pull and Bear, Oysho, Stradivarius, Walmart... </span>
+                        Oltre 2500 lavoratori rimasero feriti al crollo dell'edificio, ma 1134 morirono.
+                        Nel momento in cui sono state notate delle crepe sull'edificio, i negozi e la banca ai piani
+                        inferiori sono stati chiusi, mentre l'avviso di evitare di utilizzare l'edificio è stato
+                        ignorato dai proprietari delle fabbriche tessili. Ai lavoratori fu infatti ordinato di tornare
+                        il giorno successivo, giorno in cui l'edificio ha ceduto, collassando durante le ore di punta
+                        della mattina.
+                        Una giornata di lutto nazionale fu proclamata per il 25 aprile. L'8 maggio un portavoce
+                        dell'esercito, Mir Rabbi, riferì che l'esercito avrebbe continuato a recuperare altri corpi
+                        dalle macerie almeno per un'altra settimana. Il 10 maggio, 17 giorni dopo il crollo, fu salvata,
+                        quasi illesa, dalle macerie una donna di nome Reshma.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Made by Dennis Bottari, Yasmine Giuliani, Matteo Leto, Fabian Dumea e Diego Milli</p>
+        </div>
+        <!-- <div class="footer-iconTop"> -->
+    </footer>
+</body>
+
+
+<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+<script src="./leaflet/leaflet-src.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="./particlesjs/particles.js"></script>
+<script type="text/javascript" src="./particlesjs/app.js"></script>
+
+</html>
